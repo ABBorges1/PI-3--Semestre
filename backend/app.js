@@ -1,3 +1,4 @@
+// Carrega as variáveis de ambiente (arquivo .env)
 require ('dotenv').config();
 
 const express = require('express');
@@ -24,5 +25,8 @@ app.use('/', indexRouter);
 /* Rotas da aplicação */
 const userRoute = require('./routes/user');
 app.use('/user', userRoute);
+
+const assessmentRoute = require('./routes/assessment');
+app.use('/assessment', assessmentRoute);
 
 module.exports = app;
